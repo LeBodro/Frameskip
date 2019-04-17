@@ -14,7 +14,9 @@ public class GameController : MonoBehaviour
     public float timeMultiplier = 1.5f;
     public float musicPitchMultiplier = 1.5f;
 
-    // Start is called before the first frame update
+    public event System.Action<int> OnWin;
+    int wins;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -22,7 +24,6 @@ public class GameController : MonoBehaviour
         music = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (goal.isColliding()) {
@@ -30,6 +31,8 @@ public class GameController : MonoBehaviour
             music.pitch *= musicPitchMultiplier;
             player.reset(spawn.transform.position);
             monster.reset(gilleSpawn.transform.position);
+            wins++;
+            OnWin(wins);
         }
     }
 }
