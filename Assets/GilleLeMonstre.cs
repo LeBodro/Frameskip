@@ -17,6 +17,6 @@ public class GilleLeMonstre : MonoBehaviour
     {
         Vector3 direction = (player.position - transform.position).normalized;
         body.velocity = direction * speed * Time.fixedDeltaTime;
-        transform.LookAt(player);
+        transform.rotation = player.rotation;
     }
 }
