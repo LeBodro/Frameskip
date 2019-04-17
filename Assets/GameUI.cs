@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
     public GameObject[] Lives;
     public Movement Player;
     public int LivesLeft = 3;
+    public AudioSource Scream;
 
     void Start()
     {
@@ -22,12 +23,13 @@ public class GameUI : MonoBehaviour
     {
         LivesLeft--;
         Lives[LivesLeft].SetActive(false);
+        StartCoroutine(DoJumpScare());
     }
 
     IEnumerator DoJumpScare()
     {
         JumpScare.SetActive(true);
-        //play sound effect;
+        Scream.Play();
         yield return new WaitForSecondsRealtime(0.37f);
         JumpScare.SetActive(false);
         if (LivesLeft == 0)

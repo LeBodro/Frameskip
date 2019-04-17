@@ -30,10 +30,10 @@ public class Movement : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        //check layer
-        if (false)
+        if (col.gameObject.tag == "Gille")
         {
             OnDeath();
+            col.gameObject.GetComponent<GilleLeMonstre>().PushBack(transform.position);
         }
     }
 }
