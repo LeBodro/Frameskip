@@ -15,8 +15,8 @@ public class GilleLeMonstre : MonoBehaviour
 
     void ChasePlayer()
     {
+        transform.rotation = player.rotation;
         Vector3 direction = (player.position - transform.position).normalized;
-        body.velocity = direction * speed * Time.fixedDeltaTime;
-        transform.LookAt(player);
+        body.MovePosition(body.position + direction * speed * Time.fixedDeltaTime);
     }
 }
