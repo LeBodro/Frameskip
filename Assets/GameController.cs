@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public Goal goal;
+    public GameObject spawn;
+    public GameObject gilleSpawn;
+    public Movement player;
+    public GilleLeMonstre monster;
+    private AudioSource music;
+
+    public float timeMultiplier = 1.5f;
+    public float musicPitchMultiplier = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        music = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (goal.isColliding()) {
+            Time.timeScale *= timeMultiplier;
+            music.pitch *= musicPitchMultiplier;
+            player.reset(spawn.transform.position);
+            monster.reset(gilleSpawn.transform.position);
+        }
     }
 }

@@ -15279,6 +15279,7 @@ MonoBehaviour:
   - {fileID: 299027337}
   - {fileID: 1481400245}
   Player: {fileID: 393592689}
+  LivesLeft: 3
 --- !u!1001 &823707698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20920,6 +20921,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1211125849}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1216249881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216249882}
+  m_Layer: 0
+  m_Name: Gille spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216249882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216249881}
+  m_LocalRotation: {x: 0, y: -0.5914504, z: 0, w: 0.80634147}
+  m_LocalPosition: {x: 3.27, y: 0, z: 2.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: -72.52, z: 0}
 --- !u!1001 &1221170142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26705,6 +26736,7 @@ GameObject:
   - component: {fileID: 1727507457}
   - component: {fileID: 1727507456}
   - component: {fileID: 1727507455}
+  - component: {fileID: 1727507459}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -26785,6 +26817,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727507459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727507454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8e7478c529d4d84821df997a8eef4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1728878095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31682,6 +31726,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17215a8d5754f4c988e91fbb44f14c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal: {fileID: 1727507459}
+  spawn: {fileID: 53456244}
+  gilleSpawn: {fileID: 1216249881}
+  player: {fileID: 393592689}
+  monster: {fileID: 6256891841806820450}
+  timeMultiplier: 1.5
+  musicPitchMultiplier: 1.5
 --- !u!1001 &3243700472420157691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31899,3 +31950,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89798e5f08f962140891efea508dcd50, type: 3}
+--- !u!114 &6256891841806820450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6256891842485637423, guid: 89798e5f08f962140891efea508dcd50,
+    type: 3}
+  m_PrefabInstance: {fileID: 6256891841806820449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef381e3b1e2fdba44ad4a561250da6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
