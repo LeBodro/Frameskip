@@ -22,17 +22,16 @@ public class GameController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         music = GetComponent<AudioSource>();
+        goal.OnReached += ResetAndSpeedUp;
     }
 
-    void FixedUpdate()
+    void ResetAndSpeedUp()
     {
-        if (goal.isColliding()) {
-            Time.timeScale *= timeMultiplier;
-            music.pitch *= musicPitchMultiplier;
-            player.reset(spawn.transform.position);
-            monster.reset(gilleSpawn.transform.position);
-            wins++;
-            OnWin(wins);
-        }
+        Time.timeScale *= timeMultiplier;
+        music.pitch *= musicPitchMultiplier;
+        player.reset(spawn.transform.position);
+        monster.reset(gilleSpawn.transform.position);
+        wins++;
+        OnWin(wins);
     }
 }
