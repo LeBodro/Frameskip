@@ -13,6 +13,11 @@ public class GilleLeMonstre : MonoBehaviour
         ChasePlayer();
     }
 
+    public void reset(Vector3 position)
+    {
+        transform.position = position;
+    }
+
     void ChasePlayer()
     {
         transform.rotation = player.rotation;
