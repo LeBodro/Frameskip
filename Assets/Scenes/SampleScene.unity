@@ -15280,7 +15280,7 @@ MonoBehaviour:
   - {fileID: 299027337}
   - {fileID: 1481400245}
   Player: {fileID: 393592689}
-  LivesLeft: 3
+  LivesLeft: 5
   Scream: {fileID: 815916233}
 --- !u!82 &815916233
 AudioSource:
