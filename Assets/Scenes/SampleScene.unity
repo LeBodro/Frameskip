@@ -26908,7 +26908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727507454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.577, y: -0.013, z: 23.988}
+  m_LocalPosition: {x: 31.29, y: -0.013, z: 23.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 726162888}
@@ -31967,6 +31967,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4695949267704838686, guid: 2daf1acf3edbb457a95cc7eb96b01dd6,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695949267704838686, guid: 2daf1acf3edbb457a95cc7eb96b01dd6,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2daf1acf3edbb457a95cc7eb96b01dd6, type: 3}
 --- !u!1001 &6256891841806820449
@@ -31980,6 +31990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gille le monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256891842485637416, guid: 89798e5f08f962140891efea508dcd50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6256891842485637420, guid: 89798e5f08f962140891efea508dcd50,
         type: 3}
