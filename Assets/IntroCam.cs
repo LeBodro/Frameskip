@@ -13,7 +13,7 @@ public class IntroCam : MonoBehaviour
     void Start()
     {
         initialAngle = transform.eulerAngles.y;
-        Screen.SetResolution(96, 72, FullScreenMode.FullScreenWindow);
+        //Screen.SetResolution(96, 72, FullScreenMode.FullScreenWindow);
     }
 
     void Update()
