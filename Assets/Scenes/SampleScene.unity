@@ -5412,7 +5412,7 @@ GameObject:
   - component: {fileID: 393592689}
   - component: {fileID: 393592688}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Player
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5448,6 +5448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 400
   speed: 1.67
+  body: {fileID: 393592688}
 --- !u!135 &393592690
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15277,6 +15278,7 @@ MonoBehaviour:
   - {fileID: 2011153474}
   - {fileID: 299027337}
   - {fileID: 1481400245}
+  Player: {fileID: 393592689}
 --- !u!1001 &823707698
 PrefabInstance:
   m_ObjectHideFlags: 0

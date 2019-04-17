@@ -6,15 +6,10 @@ public class Movement : MonoBehaviour
 {
     public float sensitivity = 500;
     public float speed = 2.33f;
-    private Rigidbody rb;
+    public Rigidbody body;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    public event System.Action OnDeath;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.fixedDeltaTime * sensitivity, 0);
@@ -23,7 +18,16 @@ public class Movement : MonoBehaviour
         {
             Movement = transform.TransformDirection(Movement);
         }
-        rb.MovePosition(rb.position + Movement * speed * Time.fixedDeltaTime);
-        rb.velocity = Vector3.zero;
+        body.MovePosition(body.position + Movement * speed * Time.fixedDeltaTime);
+        body.velocity = Vector3.zero;
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        //check layer
+        if (false)
+        {
+            OnDeath();
+        }
     }
 }
